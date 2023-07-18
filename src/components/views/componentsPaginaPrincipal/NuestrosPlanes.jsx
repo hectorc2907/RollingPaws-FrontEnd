@@ -1,14 +1,17 @@
-import React from "react";
+import { Row, Container } from "react-bootstrap";
 import ItemNuestrosPlanes from "./ItemNuestrosPlanes";
 
 const NuestrosPlanes = () => {
   return (
-    <div className="container">
+    <Container>
       <h2>Nuestros Planes</h2>
-      <ItemNuestrosPlanes></ItemNuestrosPlanes>
-      <ItemNuestrosPlanes></ItemNuestrosPlanes>
-      <ItemNuestrosPlanes></ItemNuestrosPlanes>
-    </div>
+      <Row>
+        <ItemNuestrosPlanes></ItemNuestrosPlanes>
+        <ItemNuestrosPlanes></ItemNuestrosPlanes>
+        <ItemNuestrosPlanes></ItemNuestrosPlanes>
+        <ItemNuestrosPlanes></ItemNuestrosPlanes>
+      </Row>
+    </Container>
   );
 };
 
