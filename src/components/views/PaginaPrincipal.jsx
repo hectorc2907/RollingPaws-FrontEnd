@@ -1,9 +1,11 @@
-import React from 'react';
+import Logo from './componentsPaginaPrincipal/Logo';
+import NuestrosPlanes from './componentsPaginaPrincipal/NuestrosPlanes';
 
 const PaginaPrincipal = () => {
     return (
         <>
-            <h1>Hola Mundo</h1>
+            <Logo></Logo>
+            <NuestrosPlanes></NuestrosPlanes>
         </>
     );
 };
