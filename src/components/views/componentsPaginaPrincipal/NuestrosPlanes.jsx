@@ -1,5 +1,5 @@
 import { Row, Container } from "react-bootstrap";
-import ItemNuestrosPlanes from "./ItemNuestrosPlanes";
+import ItemNuestrosPlanes from "./item/ItemNuestrosPlanes";
 
 const NuestrosPlanes = () => {
   return (

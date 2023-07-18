@@ -1,5 +1,5 @@
 import { Container, Row } from "react-bootstrap";
-import ItemNuestrosProfesionales from "./ItemNuestrosProfesionales";
+import ItemNuestrosProfesionales from "./item/ItemNuestrosProfesionales";
 
 const NuestrosProfesionales = () => {
   return (
