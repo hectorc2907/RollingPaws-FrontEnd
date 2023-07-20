@@ -1,0 +1,23 @@
+#root{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container, .container-fluid{
+  flex-grow: 1;
+}
+
+.btn{
+  border-radius: 6px;
+  border: 2px solid hsl(180, 100%, 25%);
+  background: #FFF;
+  color: #008080;
+  font-family: 'Chalet', Courier, monospace;
+}
+
+.btn:hover{
+  background-color: #F1C40F;
+  border-color: #F1C40F;
+  color: #f5f5f5;
+}
