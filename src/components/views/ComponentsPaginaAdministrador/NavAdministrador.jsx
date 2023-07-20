@@ -1,15 +1,37 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Container, Nav, Table } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/css/bootstrap.min.css";
+import { obtenerListaPacientes } from "../../helpers/queries";
+import Swal from "sweetalert2";
+import ItemPacientes from "./item/ItemPacientes";
 
 const NavAdministrador = () => {
+  const [pacientes, setPacientes] = useState([]);
+  useEffect(() => {
+    obtenerListaPacientes().then((respuesta) => {
+      if (respuesta) {
+        setPacientes(respuesta);
+      } else {
+        Swal.fire(
+          "Error",
+          "Intente realizar esta operacion en unos minutos",
+          "error"
+        );
+      }
+    });
+  }, []);
   const [tabActiva, setTabActiva] = useState("pacientes");
   const toggleTab = (tab) => {
     setTabActiva(tab);
   };
+
   return (
     <Container>
-      <Nav className="d-flex justify-content-center" variant="tabs" defaultActiveKey="pacientes">
+      <Nav
+        className="d-flex justify-content-center"
+        variant="tabs"
+        defaultActiveKey="pacientes"
+      >
         <Nav.Item>
           <Nav.Link eventKey="pacientes" onClick={() => toggleTab("pacientes")}>
             Pacientes
@@ -36,6 +58,14 @@ const NavAdministrador = () => {
               <th>Acciones</th>
             </tr>
           </thead>
+          <tbody>
+            {pacientes.map((paciente) => (
+              <ItemPacientes
+                key={paciente._id}
+                paciente={paciente}
+              ></ItemPacientes>
+            ))}
+          </tbody>
         </Table>
       )}
       {tabActiva === "turnos" && (
