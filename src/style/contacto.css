@@ -1,0 +1,15 @@
+h1{
+  color: #008080 !important;
+  font-family: 'Chalet'; 
+}
+
+form{
+  font-family: 'SF UI Display';
+}
+
+form div{
+  margin: 10px
+}
+form button{
+  font-family: 'Sofia Pro Light', Courier, monospace;
+}
