@@ -1,16 +1,32 @@
 import { useEffect, useState } from "react";
 import { Container, Nav, Table } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { obtenerListaPacientes } from "../../helpers/queries";
+import {
+  obtenerListaPacientes,
+  obtenerListaTurnos,
+} from "../../helpers/queries";
 import Swal from "sweetalert2";
 import ItemPacientes from "./item/ItemPacientes";
+import ItemTurnos from "./item/ItemTurnos";
 
 const NavAdministrador = () => {
   const [pacientes, setPacientes] = useState([]);
+  const [turnos, setTurnos] = useState([]);
   useEffect(() => {
     obtenerListaPacientes().then((respuesta) => {
       if (respuesta) {
         setPacientes(respuesta);
+      } else {
+        Swal.fire(
+          "Error",
+          "Intente realizar esta operacion en unos minutos",
+          "error"
+        );
+      }
+    });
+    obtenerListaTurnos().then((respuesta) => {
+      if (respuesta) {
+        setTurnos(respuesta);
       } else {
         Swal.fire(
           "Error",
@@ -80,6 +96,11 @@ const NavAdministrador = () => {
               <th>Acciones</th>
             </tr>
           </thead>
+          <tbody>
+            {turnos.map((turno)=>(
+              <ItemTurnos key={turno._id} turno={turno}></ItemTurnos>
+            ))}
+          </tbody>
         </Table>
       )}
     </Container>
