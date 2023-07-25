@@ -5,10 +5,10 @@ function App() {
 
   return (
     <BrowserRouter>
+    <Menu usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado}></Menu>
       <Routes>
       <Route exact path="/login" element={<Login setUsuarioLogueado={setUsuarioLogueado}></Login>}></Route>
       </Routes>
-      <Route exact path="/login" element={<Login setUsuarioLogueado={setUsuarioLogueado}></Login>}></Route>
     </BrowserRouter>
   )
 }
