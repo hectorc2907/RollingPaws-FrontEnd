@@ -8,6 +8,7 @@ import {
 import Swal from "sweetalert2";
 import ItemPacientes from "./item/ItemPacientes";
 import ItemTurnos from "./item/ItemTurnos";
+import { Link } from "react-router-dom";
 
 const NavAdministrador = () => {
   const [pacientes, setPacientes] = useState([]);
@@ -43,6 +44,10 @@ const NavAdministrador = () => {
 
   return (
     <Container>
+      <div className="my-4 d-flex justify-content-around">
+        <Link className="btn btn-success" to="/administrador/crear-paciente">Agregar Paciente</Link>
+        <Link className="btn btn-success" to="/administrador/crear-turno">Agregar Turno</Link>
+      </div>
       <Nav
         className="d-flex justify-content-center"
         variant="tabs"
