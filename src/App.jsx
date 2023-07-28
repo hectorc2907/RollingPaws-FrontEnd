@@ -1,14 +1,22 @@
-import './App.css'
-import Contacto from './components/Contacto'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import PaginaPrincipal from "./components/views/PaginaPrincipal";
 
 function App() {
-
   return (
     <>
-      <Contacto></Contacto>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            exact
+            path="/"
+            element={<PaginaPrincipal></PaginaPrincipal>}
+          ></Route>
+        </Routes>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
