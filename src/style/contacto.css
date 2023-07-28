@@ -13,3 +13,7 @@ form div{
 form button{
   font-family: 'Sofia Pro Light', Courier, monospace;
 }
+
+#form-contacto{
+  max-width: 768px;
+}
