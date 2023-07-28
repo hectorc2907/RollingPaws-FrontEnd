@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Button, Container, Form, FormGroup } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
 import "../style/contacto.css";
 
 const Contacto = () => {
@@ -11,8 +12,31 @@ const Contacto = () => {
     reset,
   } = useForm();
 
-  const onSubmit = (consulta) => {
+  const onSubmit = (consulta, e) => {
     console.log(consulta);
+    sendEmail(e);
+  };
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_01ffqmn",
+        "template_5e8wppq",
+        form.current,
+        "8d4RcEEeuqFmFfWjt"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
   return (
     <>
@@ -20,49 +44,61 @@ const Contacto = () => {
         <div className="text-center mt-5">
           <h1>Contacta con Nosotros</h1>
         </div>
-        <Form onSubmit={handleSubmit(onSubmit)}>
+        <Form ref={form} onSubmit={handleSubmit(onSubmit)}>
           <FormGroup controlId="inputNombre">
-            <Form.Control type="text"
+            <Form.Control
+              type="text"
               placeholder="Tu nombre"
-              {...register('nombre', {
-                required: 'El nombre es un dato obligatorio',
+              {...register("user_name", {
+                required: "El nombre es un dato obligatorio",
                 minLength: {
                   value: 2,
-                  message: 'La cantidad mínima de caracteres es de 2 digitos'
+                  message: "La cantidad mínima de caracteres es de 2 digitos",
                 },
                 maxLength: {
                   value: 30,
-                  message: 'La cantidad mínima de caracteres es de 30 digitos'
-                }
-              })}/>
-            <Form.Text className="text-danger">{errors.nombre?.message}</Form.Text>
+                  message: "La cantidad mínima de caracteres es de 30 digitos",
+                },
+              })}
+              name="user_name"/>
+            <Form.Text className="text-danger">
+              {errors.nombre?.message}
+            </Form.Text>
           </FormGroup>
           <FormGroup controlId="inputEmail">
-            <Form.Control type="email"
+            <Form.Control
+              type="email"
               placeholder="Tu e-mail"
-              {...register('email', {
-                required: 'El e-mail es un dato obligatorio',
-                pattern:{
-                  value: /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=? ^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a -z0-9](?:[a-z0-9-]*[a-z0-9])?$/,
-                  message:'El email debe tener el siguiente formato mail@dominio.com'
-                }
-              })}/>
-              <Form.Text className="text-danger">{errors.email?.message}</Form.Text>
+              {...register("user_email", {
+                required: "El e-mail es un dato obligatorio",
+                pattern: {
+                  value:
+                    /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=? ^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a -z0-9](?:[a-z0-9-]*[a-z0-9])?$/,
+                  message:
+                    "El email debe tener el siguiente formato mail@dominio.com",
+                },
+              })}
+              name="user_email"/>
+            <Form.Text className="text-danger">
+              {errors.email?.message}
+            </Form.Text>
           </FormGroup>
-          <FormGroup controlId="inputOpcionConsulta">
-            <Form.Select {...register('opcionConsulta')}>
-              <option>Seleccione el tema de su consulta</option>
-              <option value="1">Planes</option>
-              <option value="2">Turnos</option>
-              <option value="3">Productos</option>
-              <option value="4">Otros</option>
+          <Form.Group controlId="inputConsulta">
+            <Form.Select placeholder="Seleccione el tema de su consulta"
+              {...register('user_subject')}
+              name="user_subject">
+                <option value="Planes">Planes</option>
+                <option value="Turnos">Turnos</option>
+                <option value="Productos">Productos</option>
+                <option value="Otros">Otros</option>
             </Form.Select>
-          </FormGroup>
-          <FormGroup controlId="inputConsulta">
-            <Form.Control as="textarea"
+          </Form.Group>
+          <FormGroup >
+            <Form.Control
+              as="textarea"
               placeholder="Tu consulta"
-              {...register('consulta',{
-                required: 'La consulta es un dato obligatorio',
+              {...register("user_message", {
+                required: "La consulta es un dato obligatorio",
                 minLength: {
                   value: 5,
                   message: "La cantidad mínima de caracteres es de 5 digitos",
@@ -70,9 +106,12 @@ const Contacto = () => {
                 maxLength: {
                   value: 500,
                   message: "La cantidad máxima de caracteres es de 500 digitos",
-                }
-              })}/>
-            <Form.Text className="text-danger">{errors.consulta?.message}</Form.Text>
+                },
+              })}
+              name="user_message"></Form.Control>
+            <Form.Text className="text-danger">
+              {errors.consulta?.message}
+            </Form.Text>
           </FormGroup>
           <div className="d-grid">
             <Button variant="primary" type="submit" size="lg">
