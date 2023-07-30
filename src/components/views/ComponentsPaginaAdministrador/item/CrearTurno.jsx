@@ -47,8 +47,9 @@ const CrearTurno = () => {
             {...register("nombreMascota", {
               required: "Debe ingresar el Nombre de la Mascota",
               pattern: {
-                value: /^[A-Za-z\s]+$/g,
-                message: "El nombre debe contener solo letras",
+                value: /^[A-Za-z\s]{2,20}$/g,
+                message:
+                  "El nombre debe contener solo letras o espacios, ademas debe contener entre 2 y 20 caracteres",
               },
             })}
           ></Form.Control>
@@ -128,6 +129,11 @@ const CrearTurno = () => {
             rows={4}
             {...register("detalleConsulta", {
               required: "Debe ingresar el detalle de la cita",
+              pattern: {
+                value: /^[A-Za-z0-9\s]{2,5000}$/g,
+                message:
+                  "El detalle debe contener letras, numeros y espacios, ademas debe contener entre 2 y 5000 caracteres",
+              },
             })}
           ></Form.Control>
           <Form.Text className="text-danger">
