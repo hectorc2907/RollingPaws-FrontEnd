@@ -1,4 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import imgInicio from "./../../../assets/inicio.png"
+import { Col, Row } from "react-bootstrap";
 
 const Logo = () => {
   return (
@@ -7,10 +9,17 @@ const Logo = () => {
         <h6 className="text-warning">Bienvenido a</h6>
         <h1 className="text-info">Rolling Paws</h1>
       </article>
-      <article>
-        <img className="img-fluid" src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80" alt="" />
-      </article>
-      <p className="fs-3">Everything you need in one spot for Spot.</p>
+      <Row>
+        <Col md={6}>
+          <img className="img-fluid" src={imgInicio} alt="" />
+        </Col>
+        <Col md={6} className="my-auto">
+          <h2>Everything you need in one spot for Spot.</h2>
+          <p className="fs-3">
+            We are a full-service, general practice vet clinic that offers you a variety of options to ensure your best friends always feel their best.
+          </p>
+        </Col>
+      </Row>
     </section>
   );
 };

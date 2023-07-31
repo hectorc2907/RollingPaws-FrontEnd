@@ -1,0 +1,19 @@
+.card-body{
+  background-color: #008080;
+  color: #F9F9F9;
+}
+
+.card-title{
+  color: #F1C40F;
+}
+
+.card-body a{
+  background-color: #E74C3C;
+  color: #F9F9F9;
+}
+
+.card-body a:hover{
+  background-color: #F9F9F9;
+  border: 1px solid #E74C3C;
+  color: #E74C3C;
+}
