@@ -11,6 +11,21 @@ export const obtenerListaPacientes = async () => {
   }
 };
 
+export const crearPaciente = async (paciente) => {
+  try {
+    const respuesta = await fetch(URL_pacientes, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(paciente),
+    });
+    return respuesta;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const obtenerListaTurnos = async () => {
   try {
     const respuesta = await fetch(URL_turnos);
