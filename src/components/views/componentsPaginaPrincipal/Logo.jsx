@@ -14,9 +14,12 @@ const Logo = () => {
           <img className="img-fluid" src={imgInicio} alt="" />
         </Col>
         <Col md={6} className="my-auto">
-          <h2>Everything you need in one spot for Spot.</h2>
-          <p className="fs-3">
-            We are a full-service, general practice vet clinic that offers you a variety of options to ensure your best friends always feel their best.
+          <h2><strong>Todo</strong> lo que necesitas <strong>para Firulais</strong>, en un solo lugar.</h2>
+          <p>
+            ¡El bienestar de tu querida mascota es nuestra prioridad! <br/>
+            Te ofrecemos un servicio integral y dedicado para cuidar a tus compañeros,
+            consultas médicas hasta productos de alta calidad,
+            nuestro equipo de expertos está listo para atender todas las necesidades de tus mascotas.
           </p>
         </Col>
       </Row>

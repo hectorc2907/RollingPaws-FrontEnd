@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Chalet";
+  src: local("Chalet"),
+  url("./fonts/ChaletLondonNineteenSixty.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sofia Pro";
+  src: url("./src/fonts/sofiapro-light.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "SF UI Display";
+  src: url("./src/fonts/SFUIText-Regular.otf") format("truetype");
+}
+
+body{
+  font-family: "SF UI Display";
+}
+
+h1{
+  font-family: "Chalet";
+}
+
+h2{
+  color: #008080;
+  font-family: "Sofia Pro";
+}

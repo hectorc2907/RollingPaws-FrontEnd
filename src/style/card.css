@@ -17,3 +17,12 @@
   border: 1px solid #E74C3C;
   color: #E74C3C;
 }
+
+.card-body i{
+  color: #E74C3C;
+  font-size: 3em;
+}
+
+.card-body i:hover{
+  /**/
+}
