@@ -15,7 +15,7 @@ const Logo = () => {
         </Col>
         <Col md={6} className="my-auto">
           <h2><strong>Todo</strong> lo que necesitas <strong>para Firulais</strong>, en un solo lugar.</h2>
-          <p>
+          <p className="lead fs-5">
             ¡El bienestar de tu querida mascota es nuestra prioridad! <br/>
             Te ofrecemos un servicio integral y dedicado para cuidar a tus compañeros,
             consultas médicas hasta productos de alta calidad,

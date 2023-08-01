@@ -4,7 +4,7 @@ import ItemNuestrosPlanes from "./item/ItemNuestrosPlanes";
 const NuestrosPlanes = () => {
   return (
     <Container>
-      <h2>Nuestros Planes</h2>
+      <h2 className="text-center display-2">Nuestros Planes</h2>
       <Row>
         <ItemNuestrosPlanes></ItemNuestrosPlanes>
         <ItemNuestrosPlanes></ItemNuestrosPlanes>

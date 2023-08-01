@@ -23,6 +23,16 @@
   font-size: 3em;
 }
 
-.card-body i:hover{
-  /**/
+.card-cliente{
+  background-image: url(../assets/fondo-card-usuario.png);
+  background-size: cover;
+}
+
+.card-servicio{
+  background-image: url(../assets/fondo-card-usuario.png);
+  background-size: cover;
+}
+
+.card-servicio .card-body{
+  background-color: #ec2610c9;
 }
