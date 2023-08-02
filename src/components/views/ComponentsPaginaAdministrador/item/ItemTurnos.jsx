@@ -21,13 +21,13 @@ const ItemTurnos = ({ turno, setTurnos }) => {
         Swal.fire(
           "Eliminado",
           `El turno de ${turno.nombreMascota} fue eliminado`,
-          "error"
+          "success"
         );
       } else {
         Swal.fire(
           "Ocurrio un Error",
           `El turno de ${turno.nombreMascota} NO fue eliminado`,
-          "success"
+          "error"
         );
       }
     });
@@ -47,7 +47,9 @@ const ItemTurnos = ({ turno, setTurnos }) => {
         >
           Editar
         </Link>
-        <Button variant="danger" onClick={eliminarTurno}>Borrar</Button>
+        <Button variant="danger" onClick={eliminarTurno}>
+          Borrar
+        </Button>
       </td>
     </tr>
   );

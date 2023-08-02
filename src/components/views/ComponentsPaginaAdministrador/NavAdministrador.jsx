@@ -88,6 +88,7 @@ const NavAdministrador = () => {
               <ItemPacientes
                 key={paciente._id}
                 paciente={paciente}
+                setPacientes={setPacientes}
               ></ItemPacientes>
             ))}
           </tbody>

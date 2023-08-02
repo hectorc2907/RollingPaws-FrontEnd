@@ -51,6 +51,17 @@ export const editarPaciente = async (paciente, id) => {
   }
 };
 
+export const borrarPaciente = async (id) => {
+  try {
+    const respuesta = await fetch(URL_pacientes + "/" + id, {
+      method: "DELETE",
+    });
+    return respuesta;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const obtenerListaTurnos = async () => {
   try {
     const respuesta = await fetch(URL_turnos);
