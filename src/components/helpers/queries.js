@@ -11,10 +11,35 @@ export const obtenerListaPacientes = async () => {
   }
 };
 
+export const obtenerPaciente = async (id) => {
+  try {
+    const respuesta = await fetch(URL_pacientes + "/" + id);
+    const paciente = await respuesta.json();
+    return paciente;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const crearPaciente = async (paciente) => {
   try {
     const respuesta = await fetch(URL_pacientes, {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(paciente),
+    });
+    return respuesta;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const editarPaciente = async (paciente, id) => {
+  try {
+    const respuesta = await fetch(URL_pacientes + "/" + id, {
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },

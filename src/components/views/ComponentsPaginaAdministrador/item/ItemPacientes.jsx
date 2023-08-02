@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const ItemPacientes = ({ paciente }) => {
   return (
     <tr>
@@ -9,7 +11,14 @@ const ItemPacientes = ({ paciente }) => {
       <td>{paciente.emailDuenio}</td>
       <td>{paciente.telefonoDuenio}</td>
       <td>{paciente.direccionDuenio}</td>
-      <td>.</td>
+      <td>
+        <Link
+          className="btn btn-warning"
+          to={"/administrador/editar-paciente/" + paciente._id}
+        >
+          Editar
+        </Link>
+      </td>
     </tr>
   );
 };

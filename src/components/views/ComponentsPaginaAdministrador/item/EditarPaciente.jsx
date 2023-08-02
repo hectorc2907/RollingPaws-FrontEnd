@@ -1,33 +1,50 @@
-import { Form, Button } from "react-bootstrap";
+import { useEffect } from "react";
+import { Button, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
-import { crearPaciente } from "../../../helpers/queries";
+import { editarPaciente, obtenerPaciente } from "../../../helpers/queries";
 
-const CrearPaciente = () => {
+const EditarPaciente = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
-    watch,
+    setValue,
   } = useForm();
 
-  const especiaMascota = watch("especieMascota");
+  const navegacion = useNavigate();
 
-  const onSubmit = (pacienteNuevo) => {
-    pacienteNuevo.especiaMascota = especiaMascota;
-    crearPaciente(pacienteNuevo).then((respuesta) => {
-      if (respuesta.status === 201) {
+  const { id } = useParams();
+
+  useEffect(() => {
+    obtenerPaciente(id).then((respuesta) => {
+      if (respuesta) {
+        setValue("nombreMascota", respuesta.nombreMascota);
+        setValue("especieMascota", respuesta.especieMascota);
+        setValue("razaMascota", respuesta.razaMascota);
+        setValue("nombreDuenio", respuesta.nombreDuenio);
+        setValue("apellidoDuenio", respuesta.apellidoDuenio);
+        setValue("emailDuenio", respuesta.emailDuenio);
+        setValue("telefonoDuenio", respuesta.telefonoDuenio);
+        setValue("direccionDuenio", respuesta.direccionDuenio);
+      }
+    });
+  }, []);
+
+  const onSubmit = (pacienteEditado) => {
+    editarPaciente(pacienteEditado, id).then((respuesta) => {
+      if (respuesta.status === 200) {
         Swal.fire(
-          "Paciente Registrado",
-          `El Paciente ${pacienteNuevo.nombreMascota} fue Registrado`,
+          "Paciente Editado",
+          `El paciente ${pacienteEditado.nombreMascota} fue editado correctamente`,
           "success"
         );
-        reset();
+        navegacion("/administrador");
       } else {
         Swal.fire(
           "Ocurrio un Error",
-          "No se pudo registrar el Paciente",
+          `El paciente ${pacienteEditado.nombreMascota} NO fue editado correctamente`,
           "error"
         );
       }
@@ -36,7 +53,7 @@ const CrearPaciente = () => {
 
   return (
     <section className="container mainSection">
-      <h1 className="display-4 mt-5">Nuevo Paciente</h1>
+      <h1 className="display-4 mt-5"><Editar></Editar> Paciente</h1>
       <hr />
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3" controlId="formNombreMascota">
@@ -192,4 +209,4 @@ const CrearPaciente = () => {
   );
 };
 
-export default CrearPaciente;
+export default EditarPaciente;
