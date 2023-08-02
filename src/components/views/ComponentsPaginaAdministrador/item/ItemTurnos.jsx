@@ -40,7 +40,7 @@ const ItemTurnos = ({ turno, setTurnos }) => {
       <td>{turno.fechaConsulta}</td>
       <td>{turno.horaConsulta}</td>
       <td>{turno.detalleConsulta}</td>
-      <td>
+      <td className="d-flex justify-content-around">
         <Link
           className="btn btn-warning"
           to={"/administrador/editar-turno/" + turno._id}
