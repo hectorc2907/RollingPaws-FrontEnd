@@ -38,14 +38,14 @@ const ItemPacientes = ({ paciente, setPacientes }) => {
 
   return (
     <tr>
-      <td>{paciente.nombreMascota}</td>
-      <td>{paciente.especieMascota}</td>
-      <td>{paciente.razaMascota}</td>
-      <td>{paciente.nombreDuenio}</td>
-      <td>{paciente.apellidoDuenio}</td>
-      <td>{paciente.emailDuenio}</td>
-      <td>{paciente.telefonoDuenio}</td>
-      <td>{paciente.direccionDuenio}</td>
+      <td className="truncate-cell">{paciente.nombreMascota}</td>
+      <td className="truncate-cell">{paciente.especieMascota}</td>
+      <td className="truncate-cell">{paciente.razaMascota}</td>
+      <td className="truncate-cell">{paciente.nombreDuenio}</td>
+      <td className="truncate-cell">{paciente.apellidoDuenio}</td>
+      <td className="truncate-cell">{paciente.emailDuenio}</td>
+      <td className="truncate-cell">{paciente.telefonoDuenio}</td>
+      <td className="truncate-cell">{paciente.direccionDuenio}</td>
       <td className="d-flex justify-content-around">
         <Link
           className="btn btn-warning"

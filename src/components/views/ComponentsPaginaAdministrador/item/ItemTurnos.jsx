@@ -35,11 +35,11 @@ const ItemTurnos = ({ turno, setTurnos }) => {
 
   return (
     <tr>
-      <td>{turno.nombreMascota}</td>
-      <td>{turno.nombreVeterinario}</td>
-      <td>{turno.fechaConsulta}</td>
-      <td>{turno.horaConsulta}</td>
-      <td>{turno.detalleConsulta}</td>
+      <td className="truncate-cell">{turno.nombreMascota}</td>
+      <td className="truncate-cell">{turno.nombreVeterinario}</td>
+      <td className="truncate-cell">{turno.fechaConsulta}</td>
+      <td className="truncate-cell">{turno.horaConsulta}</td>
+      <td className="truncate-cell">{turno.detalleConsulta}</td>
       <td className="d-flex justify-content-around">
         <Link
           className="btn btn-warning"
