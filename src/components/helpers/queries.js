@@ -100,3 +100,14 @@ export const editarTurno = async (turno, id) => {
     console.log(error);
   }
 };
+
+export const borrarTurno = async (id) => {
+  try {
+    const respuesta = await fetch(URL_turnos + "/" + id, {
+      method: "DELETE",
+    });
+    return respuesta;
+  } catch (error) {
+    console.log(error);
+  }
+};
