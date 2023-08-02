@@ -45,8 +45,12 @@ const NavAdministrador = () => {
   return (
     <Container>
       <div className="my-4 d-flex justify-content-around">
-        <Link className="btn btn-success" to="/administrador/crear-paciente">Agregar Paciente</Link>
-        <Link className="btn btn-success" to="/administrador/crear-turno">Agregar Turno</Link>
+        <Link className="btn btn-success" to="/administrador/crear-paciente">
+          Agregar Paciente
+        </Link>
+        <Link className="btn btn-success" to="/administrador/crear-turno">
+          Agregar Turno
+        </Link>
       </div>
       <Nav
         className="d-flex justify-content-center"
@@ -102,8 +106,12 @@ const NavAdministrador = () => {
             </tr>
           </thead>
           <tbody>
-            {turnos.map((turno)=>(
-              <ItemTurnos key={turno._id} turno={turno}></ItemTurnos>
+            {turnos.map((turno) => (
+              <ItemTurnos
+                key={turno._id}
+                turno={turno}
+                setTurnos={setTurnos}
+              ></ItemTurnos>
             ))}
           </tbody>
         </Table>

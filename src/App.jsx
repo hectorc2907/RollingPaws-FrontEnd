@@ -5,6 +5,7 @@ import PaginaPrincipal from "./components/views/PaginaPrincipal";
 import Administrador from "./components/views/Administrador";
 import CrearPaciente from "./components/views/ComponentsPaginaAdministrador/item/CrearPaciente";
 import CrearTurno from "./components/views/ComponentsPaginaAdministrador/item/CrearTurno";
+import EditarTurno from "./components/views/ComponentsPaginaAdministrador/item/EditarTurno";
 
 function App() {
   return (
@@ -30,6 +31,11 @@ function App() {
             exact
             path="/administrador/crear-turno"
             element={<CrearTurno></CrearTurno>}
+          ></Route>
+          <Route
+            exact
+            path="/administrador/editar-turno/:id"
+            element={<EditarTurno></EditarTurno>}
           ></Route>
         </Routes>
       </BrowserRouter>

@@ -36,10 +36,35 @@ export const obtenerListaTurnos = async () => {
   }
 };
 
+export const obtenerTurno = async (id) => {
+  try {
+    const respuesta = await fetch(URL_turnos + "/" + id);
+    const turno = await respuesta.json();
+    return turno;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const crearTurno = async (turno) => {
   try {
     const respuesta = await fetch(URL_turnos, {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(turno),
+    });
+    return respuesta;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const editarTurno = async (turno, id) => {
+  try {
+    const respuesta = await fetch(URL_turnos + "/" + id, {
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
