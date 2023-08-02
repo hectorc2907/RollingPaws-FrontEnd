@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, Link } from "react-router-dom";
 import { editarTurno, obtenerTurno } from "../../../helpers/queries";
 import { Form, Button } from "react-bootstrap";
 import Swal from "sweetalert2";
@@ -153,8 +153,11 @@ const EditarTurno = () => {
           </Form.Text>
         </Form.Group>
         <Button variant="success" type="submit">
-          Generar
+          Guardar Cambios
         </Button>
+        <Link className="btn btn-warning ms-3" to={"/administrador"}>
+          Volver
+        </Link>
       </Form>
     </section>
   );

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { editarPaciente, obtenerPaciente } from "../../../helpers/queries";
 
@@ -53,7 +53,7 @@ const EditarPaciente = () => {
 
   return (
     <section className="container mainSection">
-      <h1 className="display-4 mt-5"><Editar></Editar> Paciente</h1>
+      <h1 className="display-4 mt-5">Editar Paciente</h1>
       <hr />
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3" controlId="formNombreMascota">
@@ -202,8 +202,11 @@ const EditarPaciente = () => {
           </Form.Text>
         </Form.Group>
         <Button variant="success" type="submit">
-          Generar
+          Guardar Cambios
         </Button>
+        <Link className="btn btn-warning ms-3" to={"/administrador"}>
+          Volver
+        </Link>
       </Form>
     </section>
   );

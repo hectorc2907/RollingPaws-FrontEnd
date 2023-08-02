@@ -2,6 +2,7 @@ import { Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { crearTurno } from "../../../helpers/queries";
+import { Link } from "react-router-dom";
 
 const CrearTurno = () => {
   const {
@@ -143,6 +144,9 @@ const CrearTurno = () => {
         <Button variant="success" type="submit">
           Generar
         </Button>
+        <Link className="btn btn-warning ms-3" to={"/administrador"}>
+          Volver
+        </Link>
       </Form>
     </section>
   );
