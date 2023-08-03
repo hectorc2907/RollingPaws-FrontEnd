@@ -1,4 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import imgInicio from "./../../../assets/inicio.png"
+import { Col, Row } from "react-bootstrap";
 
 const Logo = () => {
   return (
@@ -7,10 +9,20 @@ const Logo = () => {
         <h6 className="text-warning">Bienvenido a</h6>
         <h1 className="text-info">Rolling Paws</h1>
       </article>
-      <article>
-        <img className="img-fluid" src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80" alt="" />
-      </article>
-      <p className="fs-3">Everything you need in one spot for Spot.</p>
+      <Row>
+        <Col md={6}>
+          <img className="img-fluid" src={imgInicio} alt="" />
+        </Col>
+        <Col md={6} className="my-auto">
+          <h2><strong>Todo</strong> lo que necesitas <strong>para Firulais</strong>, en un solo lugar.</h2>
+          <p className="lead fs-5">
+            ¡El bienestar de tu querida mascota es nuestra prioridad! <br/>
+            Te ofrecemos un servicio integral y dedicado para cuidar a tus compañeros,
+            consultas médicas hasta productos de alta calidad,
+            nuestro equipo de expertos está listo para atender todas las necesidades de tus mascotas.
+          </p>
+        </Col>
+      </Row>
     </section>
   );
 };

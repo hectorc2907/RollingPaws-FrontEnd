@@ -4,7 +4,7 @@ import { Row, Container } from "react-bootstrap";
 const NuestrosServicios = () => {
   return (
     <Container>
-      <h2>Nuestros Servicios</h2>
+      <h2 className="text-center display-2 mt-3">Nuestros Servicios</h2>
       <Row>
         <ItemNuestrosServicios></ItemNuestrosServicios>
         <ItemNuestrosServicios></ItemNuestrosServicios>
