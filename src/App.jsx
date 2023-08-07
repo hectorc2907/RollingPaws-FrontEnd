@@ -7,11 +7,13 @@ import CrearPaciente from "./components/views/ComponentsPaginaAdministrador/item
 import CrearTurno from "./components/views/ComponentsPaginaAdministrador/item/CrearTurno";
 import EditarTurno from "./components/views/ComponentsPaginaAdministrador/item/EditarTurno";
 import EditarPaciente from "./components/views/ComponentsPaginaAdministrador/item/EditarPaciente";
+import Menu from "./components/common/Menu";
 
 function App() {
   return (
     <>
       <BrowserRouter>
+        <Menu></Menu>
         <Routes>
           <Route
             exact
