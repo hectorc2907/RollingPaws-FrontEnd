@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { Button, Container, Form, FormGroup } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
-import "../style/contacto.css";
+import "../../style/contacto.css";
 
 const Contacto = () => {
   const {

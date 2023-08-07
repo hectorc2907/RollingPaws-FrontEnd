@@ -9,9 +9,9 @@ import EditarTurno from "./components/views/ComponentsPaginaAdministrador/item/E
 import EditarPaciente from "./components/views/ComponentsPaginaAdministrador/item/EditarPaciente";
 import Menu from "./components/common/Menu";
 import Footer from "./components/common/Footer";
-import Error404 from "./components/Error404";
-import Contacto from "./components/Contacto";
-import AcercaDeNosotros from "./components/AcercaDeNosotros";
+import Error404 from "./components/views/Error404";
+import Contacto from "./components/views/Contacto";
+import AcercaDeNosotros from "./components/views/AcercaDeNosotros";
 
 function App() {
   return (
