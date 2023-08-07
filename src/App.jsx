@@ -9,6 +9,7 @@ import EditarTurno from "./components/views/ComponentsPaginaAdministrador/item/E
 import EditarPaciente from "./components/views/ComponentsPaginaAdministrador/item/EditarPaciente";
 import Menu from "./components/common/Menu";
 import Footer from "./components/common/Footer";
+import Error404 from './components/Error404'
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
             path="/administrador/editar-turno/:id"
             element={<EditarTurno></EditarTurno>}
           ></Route>
+          <Route path="*" element={<Error404></Error404>}></Route>
         </Routes>
         <Footer></Footer>
       </BrowserRouter>
