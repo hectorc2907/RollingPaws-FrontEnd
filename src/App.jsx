@@ -9,7 +9,9 @@ import EditarTurno from "./components/views/ComponentsPaginaAdministrador/item/E
 import EditarPaciente from "./components/views/ComponentsPaginaAdministrador/item/EditarPaciente";
 import Menu from "./components/common/Menu";
 import Footer from "./components/common/Footer";
-import Error404 from './components/Error404'
+import Error404 from "./components/Error404";
+import Contacto from "./components/Contacto";
+import AcercaDeNosotros from "./components/AcercaDeNosotros";
 
 function App() {
   return (
@@ -21,6 +23,12 @@ function App() {
             exact
             path="/"
             element={<PaginaPrincipal></PaginaPrincipal>}
+          ></Route>
+          <Route exact path="/contacto" element={<Contacto></Contacto>}></Route>
+          <Route
+            exact
+            path="/nosotros"
+            element={<AcercaDeNosotros></AcercaDeNosotros>}
           ></Route>
           <Route
             exact
