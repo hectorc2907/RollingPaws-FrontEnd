@@ -1,0 +1,38 @@
+.card-body{
+  background-color: #008080;
+  color: #F9F9F9;
+}
+
+.card-title{
+  color: #F1C40F;
+}
+
+.card-body a{
+  background-color: #E74C3C;
+  color: #F9F9F9;
+}
+
+.card-body a:hover{
+  background-color: #F9F9F9;
+  border: 1px solid #E74C3C;
+  color: #E74C3C;
+}
+
+.card-body i{
+  color: #E74C3C;
+  font-size: 3em;
+}
+
+.card-cliente{
+  background-image: url(../assets/fondo-card-usuario.png);
+  background-size: cover;
+}
+
+.card-servicio{
+  background-image: url(../assets/fondo-card-usuario.png);
+  background-size: cover;
+}
+
+.card-servicio .card-body{
+  background-color: #ec2610c9;
+}

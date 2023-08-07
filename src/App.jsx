@@ -1,5 +1,5 @@
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PaginaPrincipal from "./components/views/PaginaPrincipal";
 import Administrador from "./components/views/Administrador";
@@ -12,6 +12,10 @@ import Footer from "./components/common/Footer";
 import Error404 from "./components/views/Error404";
 import Contacto from "./components/views/Contacto";
 import AcercaDeNosotros from "./components/views/AcercaDeNosotros";
+import "./App.css";
+import "./fonts/ChaletLondonNineteenSixty.ttf";
+import "./fonts/sofiapro-light.otf";
+import "./fonts/SFUIText-Regular.otf";
 
 function App() {
   return (
