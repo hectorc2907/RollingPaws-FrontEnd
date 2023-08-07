@@ -8,6 +8,7 @@ import CrearTurno from "./components/views/ComponentsPaginaAdministrador/item/Cr
 import EditarTurno from "./components/views/ComponentsPaginaAdministrador/item/EditarTurno";
 import EditarPaciente from "./components/views/ComponentsPaginaAdministrador/item/EditarPaciente";
 import Menu from "./components/common/Menu";
+import Footer from "./components/common/Footer";
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
             element={<EditarTurno></EditarTurno>}
           ></Route>
         </Routes>
+        <Footer></Footer>
       </BrowserRouter>
     </>
   );
