@@ -4,7 +4,7 @@ import {Link, NavLink} from 'react-router-dom';
 
 const Footer = () => {
     return (
-      <footer className="bg-dark text-light py-4 text-center justify-content-around">
+      <footer className="bg-dark text-light mt-4 py-4 text-center justify-content-around">
         <Container>
         <Row>
           <Col xs={4} md={4}>
