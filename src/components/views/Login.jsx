@@ -1,6 +1,6 @@
 import { Form, Button, Container, Card } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { iniciarSesion } from "../helpers/queries";
+import { iniciarSesion } from "../../helpers/queries";
 import Swal from "sweetalert2";
 
 const Login = () => {

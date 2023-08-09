@@ -16,13 +16,15 @@ import "./App.css";
 import "./fonts/ChaletLondonNineteenSixty.ttf";
 import "./fonts/sofiapro-light.otf";
 import "./fonts/SFUIText-Regular.otf";
-import Login from "./components/Login.jsx";
+import Login from "./components/views/Login.jsx";
 import { useState } from "react";
 
 function App() {
   const usuarioSessionStorage =
     JSON.parse(sessionStorage.getItem("usuario")) || {};
-  const [usuarioLogueado, setUsuarioLogueado] = useState(usuarioSessionStorage);
+  const [usuarioLogueado, setUsuarioLogueado] = useState({
+    usuarioSessionStorage,
+  });
   return (
     <>
       <BrowserRouter>
