@@ -2,11 +2,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PaginaPrincipal from "./components/views/PaginaPrincipal";
-import Administrador from "./components/views/Administrador";
-import CrearPaciente from "./components/views/ComponentsPaginaAdministrador/item/CrearPaciente";
-import CrearTurno from "./components/views/ComponentsPaginaAdministrador/item/CrearTurno";
-import EditarTurno from "./components/views/ComponentsPaginaAdministrador/item/EditarTurno";
-import EditarPaciente from "./components/views/ComponentsPaginaAdministrador/item/EditarPaciente";
 import Menu from "./components/common/Menu";
 import Footer from "./components/common/Footer";
 import Error404 from "./components/views/Error404";
@@ -18,6 +13,8 @@ import "./fonts/sofiapro-light.otf";
 import "./fonts/SFUIText-Regular.otf";
 import Login from "./components/views/Login.jsx";
 import { useState } from "react";
+import RutasProtegidas from "./components/routes/RutasProtegidas";
+import RutasAdministrador from "./components/routes/RutasAdministrador";
 
 function App() {
   const usuarioSessionStorage =
@@ -51,28 +48,12 @@ function App() {
           ></Route>
           <Route
             exact
-            path="/administrador"
-            element={<Administrador></Administrador>}
-          ></Route>
-          <Route
-            exact
-            path="/administrador/crear-paciente"
-            element={<CrearPaciente></CrearPaciente>}
-          ></Route>
-          <Route
-            exact
-            path="/administrador/editar-paciente/:id"
-            element={<EditarPaciente></EditarPaciente>}
-          ></Route>
-          <Route
-            exact
-            path="/administrador/crear-turno"
-            element={<CrearTurno></CrearTurno>}
-          ></Route>
-          <Route
-            exact
-            path="/administrador/editar-turno/:id"
-            element={<EditarTurno></EditarTurno>}
+            path="/administrador/*"
+            element={
+              <RutasProtegidas>
+                <RutasAdministrador></RutasAdministrador>
+              </RutasProtegidas>
+            }
           ></Route>
           <Route path="*" element={<Error404></Error404>}></Route>
         </Routes>

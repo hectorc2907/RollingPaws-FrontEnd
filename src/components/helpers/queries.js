@@ -1,5 +1,6 @@
 const URL_pacientes = import.meta.env.VITE_API_PACIENTES;
 const URL_turnos = import.meta.env.VITE_API_TURNOS;
+const URL_administrador = import.meta.env.VITE_API_USUARIOLOGIN;
 
 export const obtenerListaPacientes = async () => {
   try {
@@ -118,6 +119,27 @@ export const borrarTurno = async (id) => {
       method: "DELETE",
     });
     return respuesta;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const iniciarSesion = async (usuario) => {
+  try {
+    const respuesta = await fetch(URL_administrador);
+    const listaAdministradores = await respuesta.json();
+    const administradorBuscado = listaAdministradores.find(
+      (itemAdministrador) => itemAdministrador.email === usuario.email
+    );
+    if (administradorBuscado) {
+      if (administradorBuscado.password !== usuario.password) {
+        return administradorBuscado;
+      } else {
+        return null;
+      }
+    } else {
+      return null;
+    }
   } catch (error) {
     console.log(error);
   }

@@ -17,7 +17,7 @@ const RutasAdministrador = () => {
         ></Route>
         <Route
           exact
-          path="/editar-paciente"
+          path="/editar-paciente/:id"
           element={<EditarPaciente></EditarPaciente>}
         ></Route>
         <Route
@@ -27,7 +27,7 @@ const RutasAdministrador = () => {
         ></Route>
         <Route
           exact
-          path="/editar-turno"
+          path="/editar-turno/:id"
           element={<EditarTurno></EditarTurno>}
         ></Route>
       </Routes>
