@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import 'bootstrap-icons/font/bootstrap-icons.css';
+import "bootstrap-icons/font/bootstrap-icons.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PaginaPrincipal from "./components/views/PaginaPrincipal";
 import Administrador from "./components/views/Administrador";
@@ -16,12 +16,20 @@ import "./App.css";
 import "./fonts/ChaletLondonNineteenSixty.ttf";
 import "./fonts/sofiapro-light.otf";
 import "./fonts/SFUIText-Regular.otf";
+import Login from "./components/Login.jsx";
+import { useState } from "react";
 
 function App() {
+  const usuarioSessionStorage =
+    JSON.parse(sessionStorage.getItem("usuario")) || {};
+  const [usuarioLogueado, setUsuarioLogueado] = useState(usuarioSessionStorage);
   return (
     <>
       <BrowserRouter>
-        <Menu></Menu>
+        <Menu
+          usuarioLogueado={usuarioLogueado}
+          setUsuarioLogueado={setUsuarioLogueado}
+        ></Menu>
         <Routes>
           <Route
             exact
@@ -29,6 +37,11 @@ function App() {
             element={<PaginaPrincipal></PaginaPrincipal>}
           ></Route>
           <Route exact path="/contacto" element={<Contacto></Contacto>}></Route>
+          <Route
+            exact
+            path="/login"
+            element={<Login setUsuarioLogueado={setUsuarioLogueado}></Login>}
+          ></Route>
           <Route
             exact
             path="/nosotros"
