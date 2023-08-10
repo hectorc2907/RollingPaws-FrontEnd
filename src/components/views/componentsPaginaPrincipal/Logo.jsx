@@ -4,7 +4,7 @@ import { Col, Row } from "react-bootstrap";
 
 const Logo = () => {
   return (
-    <section className="container">
+    <section className="container" data-aos="zoom-in">
       <article className="">
         <h6 className="text-warning">Bienvenido a</h6>
         <h1 className="text-info">Rolling Paws</h1>
