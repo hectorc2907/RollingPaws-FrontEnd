@@ -3,6 +3,7 @@ import { Button, Container, Form, FormGroup } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import "../../style/contacto.css";
+import Swal from "sweetalert2";
 
 const Contacto = () => {
   const {
@@ -32,9 +33,12 @@ const Contacto = () => {
       .then(
         (result) => {
           console.log(result.text);
+          Swal.fire("Consulta Enviada","Su consulta se envio!!","success");
+          reset();
         },
         (error) => {
           console.log(error.text);
+          Swal.fire("Consulta NO Enviada","Su consulta no se envio!!","error");
         }
       );
   };
