@@ -12,11 +12,11 @@ const Footer = () => {
           </Col>
           <Col xs={4} md={4}>
             <ul className="list-unstyled">
-              <li>Login</li>
-              <li>Turnos</li>
-              <li>Contacto</li>
-              <li>Acerca de Nosotros</li>
-              <li>Términos y condiciones</li>
+              <NavLink className={"nav-item nav-link"} to={"/login"}><li>Login</li></NavLink>
+              <NavLink className={"nav-item nav-link"} to={"/*"}><li>Turnos</li></NavLink>
+              <NavLink className={"nav-item nav-link"} to={"/contacto"}><li>Contacto</li></NavLink>
+              <NavLink className={"nav-item nav-link"} to={"/nosotros"}><li>Acerca de Nosotros</li></NavLink>
+              <NavLink className={"nav-item nav-link"} to={"/*"}><li>Términos y condiciones</li></NavLink>
             </ul>
           </Col>
           <Col xs={4} md={4}>

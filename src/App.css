@@ -55,3 +55,11 @@
     color: #008080;
     font-family: "Sofia Pro";
   }
+
+.card a{
+  background-color: transparent;
+}
+.card a:hover{
+  background-color: transparent;
+  border: none;
+}

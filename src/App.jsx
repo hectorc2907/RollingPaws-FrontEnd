@@ -15,8 +15,11 @@ import Login from "./components/views/Login.jsx";
 import { useState } from "react";
 import RutasProtegidas from "./components/routes/RutasProtegidas";
 import RutasAdministrador from "./components/routes/RutasAdministrador";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
+  AOS.init();
   const usuarioSessionStorage =
     JSON.parse(sessionStorage.getItem("usuario")) || {};
   const [usuarioLogueado, setUsuarioLogueado] = useState(usuarioSessionStorage);

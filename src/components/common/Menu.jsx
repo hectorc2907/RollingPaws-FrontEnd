@@ -20,10 +20,10 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
             <NavLink end className="nav-item nav-link" to="/">
               Inicio
             </NavLink>
-            <NavLink end className="nav-item nav-link" to="/Acerca de Nosotros">
+            <NavLink end className="nav-item nav-link" to="/nosotros">
               Acerca de Nosotros
             </NavLink>
-            <NavLink end className="nav-item nav-link" to="/Contacto">
+            <NavLink end className="nav-item nav-link" to="/contacto">
               Contacto
             </NavLink>
             {usuarioLogueado.nombreUsuario ? (
