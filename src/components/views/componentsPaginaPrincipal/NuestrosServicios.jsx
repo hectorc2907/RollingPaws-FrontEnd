@@ -14,7 +14,7 @@ const NuestrosServicios = () => {
               </Card.Title>
               <Card.Text className="text-center mb-0">
                 <Link className="px-3 py-2" to={"/error404"}>
-                  <i class="bi bi-plus-lg text-light"></i>
+                  <i className="bi bi-plus-lg text-light"></i>
                 </Link>
               </Card.Text>
             </Card.Body>
@@ -35,7 +35,7 @@ const NuestrosServicios = () => {
               </Card.Title>
               <Card.Text className="text-center mb-0">
                 <Link className="px-3 py-2" to={"/error404"}>
-                  <i class="bi bi-plus-lg text-light"></i>
+                  <i className="bi bi-plus-lg text-light"></i>
                 </Link>
               </Card.Text>
             </Card.Body>
@@ -56,7 +56,7 @@ const NuestrosServicios = () => {
               </Card.Title>
               <Card.Text className="text-center mb-0">
                 <Link className="px-3 py-2" to={"/error404"}>
-                  <i class="bi bi-plus-lg text-light"></i>
+                  <i className="bi bi-plus-lg text-light"></i>
                 </Link>
               </Card.Text>
             </Card.Body>
@@ -77,7 +77,7 @@ const NuestrosServicios = () => {
               </Card.Title>
               <Card.Text className="text-center mb-0">
                 <Link className="px-3 py-2" to={"/error404"}>
-                  <i class="bi bi-plus-lg text-light"></i>
+                  <i className="bi bi-plus-lg text-light"></i>
                 </Link>
               </Card.Text>
             </Card.Body>

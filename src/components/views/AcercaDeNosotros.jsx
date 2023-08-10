@@ -7,7 +7,7 @@ import { Card, Col, Container, Row } from "react-bootstrap";
 const AcercaDeNosotros = () => {
   return (
     <Container>
-      <h1 className="my-3">Acerca de Nosotros</h1>
+      <p className='text-center display-1 text-info my-3'>Acerca de Nosotros</p>
       <p>En Rolling Paws, estamos comprometidos con la salud y la felicidad de tus adorables compañeros de vida.<br/>
       Nuestra pasión por los animales nos impulsa a brindar atención excepcional y compasiva a cada paciente peludo que camina por nuestras puertas.</p>
       <Row>

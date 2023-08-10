@@ -23,7 +23,7 @@ const NuestrosProfesionales = () => {
                   <p className="mb-0">Directora</p>
                 </Col>
                 <Col xs={3} className="text-end">
-                  <i class="bi bi-person-vcard-fill"></i>
+                  <i className="bi bi-person-vcard-fill"></i>
                 </Col>
               </Row>
             </Card.Body>
@@ -45,7 +45,7 @@ const NuestrosProfesionales = () => {
                   <p className="mb-0">Veterinario</p>
                 </Col>
                 <Col xs={3} className="text-end">
-                  <i class="bi bi-person-vcard-fill"></i>
+                  <i className="bi bi-person-vcard-fill"></i>
                 </Col>
               </Row>
             </Card.Body>
@@ -67,7 +67,7 @@ const NuestrosProfesionales = () => {
                   <p className="mb-0">Veterinario</p>
                 </Col>
                 <Col xs={3} className="text-end">
-                  <i class="bi bi-person-vcard-fill"></i>
+                  <i className="bi bi-person-vcard-fill"></i>
                 </Col>
               </Row>
             </Card.Body>
