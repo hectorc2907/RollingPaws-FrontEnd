@@ -63,3 +63,7 @@
   background-color: transparent;
   border: none;
 }
+
+.img-logo{
+  max-width: 50px;
+}

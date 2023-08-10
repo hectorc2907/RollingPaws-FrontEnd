@@ -1,14 +1,15 @@
 import { Navbar, Container, Row, Col } from "react-bootstrap";
 import {Link, NavLink} from 'react-router-dom';
+import logo from '../../assets/rolling-paws-logo.svg'
 
 
 const Footer = () => {
     return (
-      <footer className="bg-dark text-light mt-4 py-4 text-center justify-content-around">
+      <footer className="bg-dark text-light py-4 mt-4 text-center justify-content-around">
         <Container>
         <Row>
           <Col xs={4} md={4}>
-            <h5>RollingPaws</h5>
+            <img src={logo} className="img-fluid text-light img-logo" ></img>
           </Col>
           <Col xs={4} md={4}>
             <ul className="list-unstyled">
