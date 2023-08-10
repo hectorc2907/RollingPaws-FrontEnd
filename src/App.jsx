@@ -16,8 +16,11 @@ import "./App.css";
 import "./fonts/ChaletLondonNineteenSixty.ttf";
 import "./fonts/sofiapro-light.otf";
 import "./fonts/SFUIText-Regular.otf";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
+  AOS.init();
   return (
     <>
       <BrowserRouter>
