@@ -40,9 +40,9 @@ const Contacto = () => {
   };
   return (
     <>
-      <Container fluid id="form-contacto">
+      <Container fluid id="form-contacto" className="bg-light">
         <div className="text-center mt-5">
-          <h1>Contacta con Nosotros</h1>
+          <p className='text-center display-1 text-info'>Contacta con Nosotros</p>
         </div>
         <Form ref={form} onSubmit={handleSubmit(onSubmit)}>
           <FormGroup controlId="inputNombre">
