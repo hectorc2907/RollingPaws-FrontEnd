@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Error404 = () => {
   return (
     <>
-      <Container className='text-center py-2' fluid>
+      <Container className='text-center py-2 mt-4' fluid>
         <h1 className='text-light display-1 pt-3'>Error 404</h1>
         <Image src={error404}></Image><br />
         <Link className='px-5 btn' to={"/"}>Volver</Link>
