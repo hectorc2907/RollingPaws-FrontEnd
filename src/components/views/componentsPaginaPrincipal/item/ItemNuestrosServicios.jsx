@@ -9,7 +9,7 @@ const ItemNuestrosServicios = () => {
                         Cirugias
                     </Card.Title>
                     <Card.Text className="text-center mb-0">
-                        <i class="bi bi-plus-lg text-light"></i>
+                        <i className="bi bi-plus-lg text-light"></i>
                     </Card.Text>
                 </Card.Body>
             </Card>

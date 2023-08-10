@@ -132,7 +132,7 @@ export const iniciarSesion = async (usuario) => {
       (itemAdministrador) => itemAdministrador.email === usuario.email
     );
     if (administradorBuscado) {
-      if (administradorBuscado.password !== usuario.password) {
+      if (administradorBuscado.password === usuario.password) {
         return administradorBuscado;
       } else {
         return null;

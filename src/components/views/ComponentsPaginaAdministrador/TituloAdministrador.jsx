@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 const TituloAdministrador = () => {
     return (
         <Container>
-            <h1 className='text-center'>Administrador</h1>
+            <p className='text-center display-1 text-info'>Administrador</p>
         </Container>
     );
 };

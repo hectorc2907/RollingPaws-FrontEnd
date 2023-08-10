@@ -15,7 +15,7 @@ const NavAdministrador = () => {
   const [pacientes, setPacientes] = useState([]);
   const [turnos, setTurnos] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 15;
+  const itemsPerPage = 10;
 
   useEffect(() => {
     obtenerListaPacientes().then((respuesta) => {
@@ -109,6 +109,7 @@ const NavAdministrador = () => {
                   <ItemPacientes
                     key={paciente._id}
                     paciente={paciente}
+                    setPacientes={setPacientes}
                   ></ItemPacientes>
                 ))}
             </tbody>
@@ -141,7 +142,7 @@ const NavAdministrador = () => {
                   currentPage * itemsPerPage
                 )
                 .map((turno) => (
-                  <ItemTurnos key={turno._id} turno={turno}></ItemTurnos>
+                  <ItemTurnos key={turno._id} turno={turno} setTurnos={setTurnos}></ItemTurnos>
                 ))}
             </tbody>
           </Table>

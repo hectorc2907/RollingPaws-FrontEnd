@@ -16,7 +16,7 @@ const ItemNuestrosProfesionales = () => {
                   <p className="mb-0">Cargo</p>
                 </Col>
                 <Col xs={3} className="text-end">
-                  <i class="bi bi-person-vcard-fill"></i>
+                  <i className="bi bi-person-vcard-fill"></i>
                 </Col>
               </Row>
         </Card.Body>

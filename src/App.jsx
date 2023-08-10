@@ -19,9 +19,7 @@ import RutasAdministrador from "./components/routes/RutasAdministrador";
 function App() {
   const usuarioSessionStorage =
     JSON.parse(sessionStorage.getItem("usuario")) || {};
-  const [usuarioLogueado, setUsuarioLogueado] = useState({
-    usuarioSessionStorage,
-  });
+  const [usuarioLogueado, setUsuarioLogueado] = useState(usuarioSessionStorage);
   return (
     <>
       <BrowserRouter>
