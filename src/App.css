@@ -27,21 +27,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-  @font-face {
-    font-family: "Chalet";
-    src: local("Chalet"),
-    url("./fonts/ChaletLondonNineteenSixty.ttf") format("truetype");
-  }
-  
-  @font-face {
-    font-family: "Sofia Pro";
-    src: url("./src/fonts/sofiapro-light.otf") format("truetype");
-  }
-  
-  @font-face {
-    font-family: "SF UI Display";
-    src: url("./src/fonts/SFUIText-Regular.otf") format("truetype");
-  }
   
   body{
     font-family: "SF UI Display";
@@ -62,4 +47,8 @@
 .card a:hover{
   background-color: transparent;
   border: none;
+}
+
+.img-logo{
+  max-width: 50px;
 }

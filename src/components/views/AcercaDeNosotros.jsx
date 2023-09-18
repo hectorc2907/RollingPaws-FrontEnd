@@ -15,12 +15,11 @@ const AcercaDeNosotros = () => {
           <Card className="px-0" data-aos="fade-up">
             <Card.Img variant="top" src={perfilJoaquin} className="img-fluid"/>
             <Card.Body>
-              <Card.Title>Joaquín G. Andrada</Card.Title>
+              <Card.Title className="d-flex justify-content-center">Joaquín G. Andrada</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
+                
               </Card.Text>
-              <Card.Footer>
+              <Card.Footer className="d-flex justify-content-center">
                 <a href="https://github.com/GuillermoA231" target="_blank" rel="noopener noreferrer">
                   <i className="bi bi-github m-2 fs-2"></i>
                 </a>
@@ -38,12 +37,11 @@ const AcercaDeNosotros = () => {
           <Card className="px-0" data-aos="fade-up" data-aos-delay="500">
             <Card.Img variant="top" src={perfilHector} className="img-fluid"/>
             <Card.Body>
-              <Card.Title>Hector Clessi</Card.Title>
+              <Card.Title className="d-flex justify-content-center">Hector Clessi</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
+                
               </Card.Text>
-              <Card.Footer>
+              <Card.Footer className="d-flex justify-content-center">
                 <a href="https://github.com/hectorc2907/" target="_blank" rel="noopener noreferrer">
                   <i className="bi bi-github m-2 fs-2"></i>
                 </a>
@@ -61,12 +59,11 @@ const AcercaDeNosotros = () => {
           <Card className="px-0" data-aos="fade-up" data-aos-delay="1000">
             <Card.Img variant="top" src={perfilGerardo} className="img-fluid"/>
             <Card.Body>
-              <Card.Title>Gerardo Mansilla</Card.Title>
+              <Card.Title className="d-flex justify-content-center">Gerardo Mansilla</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
+                
               </Card.Text>
-              <Card.Footer>
+              <Card.Footer className="d-flex justify-content-center">
                 <a href="https://github.com/pequege" target="_blank" rel="noopener noreferrer">
                   <i className="bi bi-github m-2 fs-2"></i>
                 </a>
