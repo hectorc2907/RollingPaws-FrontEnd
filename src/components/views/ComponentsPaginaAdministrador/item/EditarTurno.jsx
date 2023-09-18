@@ -81,9 +81,9 @@ const EditarTurno = () => {
             })}
           >
             <option value="">Seleccione una opcion</option>
-            <option value="veterinario_1">Veterinario 1</option>
-            <option value="veterinario_2">Veterinario 2</option>
-            <option value="veterinario_3">Veterinario 3</option>
+            <option value="veterinario_1">Dra Michi Fuz</option>
+            <option value="veterinario_2">Dr Dober Mann</option>
+            <option value="veterinario_3">Dr Juan Cann Ario</option>
           </Form.Select>
           <Form.Text className="text-danger">
             {errors.nombreVeterinario?.message}
