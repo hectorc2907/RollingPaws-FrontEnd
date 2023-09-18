@@ -29,6 +29,18 @@ const EditarTurno = () => {
   }, []);
 
   const onSubmit = (turnoEditado) => {
+    const fechaConsulta = new Date(turnoEditado.fechaConsulta);
+    const fechaActual = new Date();
+
+    if (fechaConsulta <= fechaActual) {
+      Swal.fire(
+        "Error",
+        "Debe seleccionar una fecha posterior al día actual",
+        "error"
+      );
+      return;
+    }
+    
     editarTurno(turnoEditado, id).then((respuesta) => {
       if (respuesta.status === 200) {
         Swal.fire(
@@ -75,15 +87,15 @@ const EditarTurno = () => {
             {...register("nombreVeterinario", {
               required: "Debe Seleccionar una opcion valida",
               pattern: {
-                value: "veterinario_1" || "veterinario_2" || "veterinario_3",
+                value: "Dra Michi Fuz" || "Dr Dober Mann" || "Dr Juan Cann Ario",
                 message: "La opcion seleccionada no es correcta",
               },
             })}
           >
             <option value="">Seleccione una opcion</option>
-            <option value="veterinario_1">Veterinario 1</option>
-            <option value="veterinario_2">Veterinario 2</option>
-            <option value="veterinario_3">Veterinario 3</option>
+            <option value="Dra Michi Fuz">Dra Michi Fuz</option>
+            <option value="Dr Dober Mann">Dr Dober Mann</option>
+            <option value="Dr Juan Cann Ario">Dr Juan Cann Ario</option>
           </Form.Select>
           <Form.Text className="text-danger">
             {errors.nombreVeterinario?.message}
