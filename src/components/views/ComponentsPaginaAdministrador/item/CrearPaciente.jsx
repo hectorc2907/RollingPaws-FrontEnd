@@ -175,7 +175,7 @@ const CrearPaciente = () => {
             {...register("direccionDuenio", {
               required: "Debe ingresar la direccion del dueño",
               pattern: {
-                value: /^[A-Za-z0-9\s]{2,40}$/g,
+                value: /^[A-Za-z0-9\sñÑ]{2,40}$/,
                 message:
                   "La direccion debe contener letras y numeros hasta 40 caracteres maximo",
               },
