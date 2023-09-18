@@ -64,15 +64,15 @@ const CrearTurno = () => {
             {...register("nombreVeterinario", {
               required: "Debe Seleccionar una opcion valida",
               pattern: {
-                value: "veterinario_1" || "veterinario_2" || "veterinario_3",
+                value: "Dra Michi Fuz" || "Dr Dober Mann" || "Dr Juan Cann Ario",
                 message: "La opcion seleccionada no es correcta",
               },
             })}
           >
             <option value="">Seleccione una opcion</option>
-            <option value="veterinario_1">Dra Michi Fuz</option>
-            <option value="veterinario_2">Dr Dober Mann</option>
-            <option value="veterinario_3">Dr Juan Cann Ario</option>
+            <option value="Dra Michi Fuz">Dra Michi Fuz</option>
+            <option value="Dr Dober Mann">Dr Dober Mann</option>
+            <option value="Dr Juan Cann Ario">Dr Juan Cann Ario</option>
           </Form.Select>
           <Form.Text className="text-danger">
             {errors.nombreVeterinario?.message}
