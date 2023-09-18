@@ -18,6 +18,15 @@ const CrearTurno = () => {
   const detalleConsulta = watch("detalleConsulta");
 
   const onSubmit = (turnoNuevo) => {
+
+    const fechaActual = new Date();
+    const fechaSeleccionada = new Date(fechaConsulta);
+
+    if (fechaSeleccionada <= fechaActual) {
+      Swal.fire("Error", "Debe seleccionar una fecha posterior al día actual", "error");
+      return;
+    }
+
     turnoNuevo.fechaConsulta = fechaConsulta;
     turnoNuevo.horaConsulta = horaConsulta;
     turnoNuevo.detalleConsulta = detalleConsulta;

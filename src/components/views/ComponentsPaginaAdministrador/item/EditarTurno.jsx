@@ -29,6 +29,18 @@ const EditarTurno = () => {
   }, []);
 
   const onSubmit = (turnoEditado) => {
+    const fechaConsulta = new Date(turnoEditado.fechaConsulta);
+    const fechaActual = new Date();
+
+    if (fechaConsulta <= fechaActual) {
+      Swal.fire(
+        "Error",
+        "Debe seleccionar una fecha posterior al día actual",
+        "error"
+      );
+      return;
+    }
+    
     editarTurno(turnoEditado, id).then((respuesta) => {
       if (respuesta.status === 200) {
         Swal.fire(
