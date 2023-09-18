@@ -164,7 +164,7 @@ const CrearPaciente = () => {
             })}
           ></Form.Control>
           <Form.Text className="text-danger">
-            {errors.numeroDuenio?.message}
+            {errors.telefonoDuenio?.message}
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="form">
@@ -175,7 +175,7 @@ const CrearPaciente = () => {
             {...register("direccionDuenio", {
               required: "Debe ingresar la direccion del dueño",
               pattern: {
-                value: /^[A-Za-z0-9ñÑ]{2,40}$/u,
+                value: /^[A-Za-z0-9\s]{2,40}$/g,
                 message:
                   "La direccion debe contener letras y numeros hasta 40 caracteres maximo",
               },

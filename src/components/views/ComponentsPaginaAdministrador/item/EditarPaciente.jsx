@@ -180,7 +180,7 @@ const EditarPaciente = () => {
             })}
           ></Form.Control>
           <Form.Text className="text-danger">
-            {errors.numeroDuenio?.message}
+            {errors.telefonoDuenio?.message}
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="form">
